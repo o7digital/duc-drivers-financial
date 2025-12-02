@@ -1,6 +1,6 @@
 {
-  "buildCommand": "cp -r \"Canvas 7 Files\"/* . && cp \"Canvas 7 Files/demo-car.html\" index.html",
-  "outputDirectory": ".",
+  "buildCommand": "rm -rf public && mkdir -p public/demos public/include public/images && cp \"Canvas 7 Files/demo-car.html\" public/index.html && cp \"Canvas 7 Files/demo-car.html\" public/demo-car.html && cp -r \"Canvas 7 Files/demos/car\" public/demos/car && cp -r \"Canvas 7 Files/css\" public/css && cp -r \"Canvas 7 Files/js\" public/js && cp -r \"Canvas 7 Files/include/rs-plugin\" public/include/ && cp -r \"Canvas 7 Files/images\" public/images && cp \"Canvas 7 Files/favicon.ico\" public/",
+  "outputDirectory": "public",
   "cleanUrls": true,
   "rewrites": [
     {
