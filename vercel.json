@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cp -r 'Canvas 7 Files'/* .",
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/demo-car.html"
+    }
+  ]
+}
