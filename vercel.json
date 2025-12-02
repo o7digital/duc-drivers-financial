@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/demo-car"
+      "destination": "/demo-car.html"
     }
   ]
 }
