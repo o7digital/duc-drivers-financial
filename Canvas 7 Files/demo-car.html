@@ -190,6 +190,51 @@
 					</div>
 				</div> <!-- Moving car on scroll End -->
 
+				<!-- Vehicle Slider Section
+				============================================= -->
+				<div class="section mt-0 bg-light" style="padding: 80px 0">
+					<div class="container">
+						<div class="heading-block text-center border-bottom-0">
+							<h2>Nuestros Vehículos Disponibles</h2>
+							<span>Descubre nuestra selección de vehículos premium</span>
+						</div>
+
+						<div class="swiper vehicle-slider mt-4">
+							<div class="swiper-wrapper">
+								<!-- Mazda Slide -->
+								<div class="swiper-slide">
+									<div class="vehicle-slide-content text-center">
+										<img src="../public/mazda.png" alt="Mazda" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+										<h3 class="mb-2">Mazda</h3>
+										<p class="text-muted">Texto del vehículo Mazda</p>
+									</div>
+								</div>
+								<!-- Nissan Slide -->
+								<div class="swiper-slide">
+									<div class="vehicle-slide-content text-center">
+										<img src="../public/nissan.png" alt="Nissan" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+										<h3 class="mb-2">Nissan</h3>
+										<p class="text-muted">Texto del vehículo Nissan</p>
+									</div>
+								</div>
+								<!-- Virtus Slide -->
+								<div class="swiper-slide">
+									<div class="vehicle-slide-content text-center">
+										<img src="../public/virtus.png" alt="Virtus" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+										<h3 class="mb-2">Virtus</h3>
+										<p class="text-muted">Texto del vehículo Virtus</p>
+									</div>
+								</div>
+							</div>
+							<!-- Add Pagination -->
+							<div class="swiper-pagination"></div>
+							<!-- Add Navigation -->
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+				</div> <!-- Vehicle Slider End -->
+
 				<!-- Features Section
 				============================================= -->
 				<div class="container">
@@ -1536,6 +1581,35 @@
 			}, function(){
 				if( jQuery(this).find('video').length > 0 ) {
 					jQuery(this).find('video').get(0).pause();
+				}
+			});
+		});
+
+		// Initialize Vehicle Slider
+		jQuery(document).ready(function($){
+			new Swiper('.vehicle-slider', {
+				slidesPerView: 1,
+				spaceBetween: 30,
+				loop: true,
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				breakpoints: {
+					768: {
+						slidesPerView: 2,
+					},
+					1024: {
+						slidesPerView: 3,
+					}
 				}
 			});
 		});
