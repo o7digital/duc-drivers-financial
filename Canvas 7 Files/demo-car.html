@@ -125,17 +125,13 @@
 
 						<!-- Primary Navigation
 						============================================= -->
-						<nav class="primary-menu with-arrows">
-							<ul class="menu-container">
-								<li class="menu-item current"><a class="menu-link" href="demo-car.html"><div>Inicio</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-car-single.html"><div>Modelos y Financiamiento</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-car-listing.html"><div>Electricos</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="#"><div>Nuestros Servicios</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-car-contact.html"><div>Contacto</div></a></li>
-							</ul>
-						</nav><!-- #primary-menu end -->
-
-					</div>
+					<nav class="primary-menu with-arrows">
+						<ul class="menu-container">
+							<li class="menu-item current"><a class="menu-link" href="demo-car.html"><div>Inicio</div></a></li>
+							<li class="menu-item"><a class="menu-link" href="#" data-lightbox="inline" data-lightbox-url="#financiamiento-form"><div>Financiamiento</div></a></li>
+							<li class="menu-item"><a class="menu-link" href="demo-car-contact.html"><div>Contacto</div></a></li>
+						</ul>
+					</nav><!-- #primary-menu end -->					</div>
 				</div>
 			</div>
 			<div class="header-wrap-clone"></div>
@@ -444,13 +440,82 @@
 						</div>
 					</div>
 
-				</div><!-- .footer-widgets-wrap end -->
+			</div><!-- .footer-widgets-wrap end -->
+		</div>
+	</footer><!-- #footer end -->
+
+	<!-- Formulario de Financiamiento (Hidden Popup)
+	============================================= -->
+	<div class="modal1 mfp-hide" id="financiamiento-form" style="max-width: 600px;">
+		<div class="block mx-auto" style="background-color: #FFF; max-width: 600px;">
+			<div style="padding: 50px;">
+				<h3 class="mb-4">Solicitud de Financiamiento</h3>
+				<p class="mb-4">Complete el formulario y nos pondremos en contacto con usted para discutir las opciones de financiamiento disponibles.</p>
+				
+				<form id="financiamiento-contact-form" name="financiamiento-contact-form" action="include/form.php" method="post" class="mb-0">
+					<div class="form-process">
+						<div class="css3-spinner">
+							<div class="css3-spinner-scaler"></div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-12 form-group mb-3">
+							<label for="nombre">Nombre Completo *</label>
+							<input type="text" id="nombre" name="nombre" class="form-control required" placeholder="Su nombre completo">
+						</div>
+
+						<div class="col-md-6 form-group mb-3">
+							<label for="telefono">Teléfono *</label>
+							<input type="tel" id="telefono" name="telefono" class="form-control required" placeholder="Su número de teléfono">
+						</div>
+
+						<div class="col-md-6 form-group mb-3">
+							<label for="email">Correo Electrónico *</label>
+							<input type="email" id="email" name="email" class="form-control required email" placeholder="su@email.com">
+						</div>
+
+						<div class="col-12 form-group mb-3">
+							<label for="modelo">Modelo de Vehículo *</label>
+							<select id="modelo" name="modelo" class="form-select required">
+								<option value="">Seleccione un modelo</option>
+								<option value="Nissan Versa 2026">Nissan Versa 2026</option>
+								<option value="Mazda 3">Mazda 3</option>
+								<option value="Volkswagen Virtus">Volkswagen Virtus</option>
+								<option value="Otro">Otro modelo</option>
+							</select>
+						</div>
+
+						<div class="col-12 form-group mb-4">
+							<label for="tipo-financiamiento">Tipo de Financiamiento *</label>
+							<select id="tipo-financiamiento" name="tipo-financiamiento" class="form-select required">
+								<option value="">Seleccione una opción</option>
+								<option value="Financiamiento Tradicional">Financiamiento Tradicional</option>
+								<option value="Leasing">Leasing</option>
+								<option value="Auto-Financiamiento">Auto-Financiamiento</option>
+							</select>
+						</div>
+
+						<div class="col-12 form-group mb-3">
+							<label for="mensaje">Mensaje Adicional (Opcional)</label>
+							<textarea id="mensaje" name="mensaje" class="form-control" rows="4" placeholder="¿Tiene alguna pregunta o comentario adicional?"></textarea>
+						</div>
+
+						<div class="col-12">
+							<button type="submit" class="button button-3d button-black m-0 w-100">Enviar Solicitud</button>
+						</div>
+					</div>
+
+					<input type="text" class="d-none" id="financiamiento-form-botcheck" name="financiamiento-form-botcheck" value="">
+					<input type="hidden" name="prefix" value="financiamiento-contact-form-">
+				</form>
+
+				<div class="form-result mt-4"></div>
 			</div>
-		</footer><!-- #footer end -->
+		</div>
+	</div>
 
-	</div><!-- #wrapper end -->
-
-	<!-- Go To Top
+</div><!-- #wrapper end -->	<!-- Go To Top
 	============================================= -->
 	<div id="gotoTop" class="uil uil-angle-up"></div>
 
