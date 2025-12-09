@@ -119,6 +119,27 @@
 			line-height: 1;
 		}
 
+		/* Remove dark overlay on hero slides */
+		.slider-element .swiper-slide::before,
+		.slider-element .swiper-slide::after {
+			display: none !important;
+		}
+		.slider-element .swiper-slide-bg {
+			opacity: 1 !important;
+			filter: none !important;
+			background-blend-mode: normal !important;
+		}
+
+		/* Footer overrides to match nuestros-modelos */
+		#footer,
+		#footer h4,
+		#footer p,
+		#footer li,
+		#footer span { color: #fff !important; }
+		#footer .widget_links a { color: #fff !important; }
+		#footer .widget_links a:hover { color: #ddd !important; }
+		#footer .footer-widgets-wrap img { display: none !important; }
+
 		.como-funciona-list .feature-box .fbox-content {
 			margin-top: 0;
 		}
@@ -552,13 +573,12 @@
 						</div>						</div>
 
 						<div class="col-lg-5 text-center text-lg-end">
-						<img src="demos/car/images/logo-footer.png" alt="Image" height="50">
-						<br>
-						<div style="color: #444">
-							<span>&copy; DUC DRIVERS FINANCING</span>
-							<div class="clear"></div>
-							<p style="margin-top: 10px;">Con el Respaldo de GRUPO PICACHO SA DE CV y de MOTOR MOTION MEXICO</p>
-						</div>
+							<div class="fw-bold text-white" style="font-size: 22px;">DUC DRIVERS FINANCING SA DE CV</div>
+							<div class="mt-2" style="color: #fff;">
+								<span>&copy; DUC DRIVERS FINANCING SA DE CV</span>
+								<div class="clear"></div>
+								<p class="mb-1" style="margin-top: 10px;">Con el Respaldo de GRUPO PICACHO y MOTORNATION</p>
+							</div>
 						</div>
 					</div>
 
