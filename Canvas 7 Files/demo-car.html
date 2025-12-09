@@ -49,11 +49,20 @@
 		.ares .tp-tab-content { padding: 15px 15px 15px 110px; }
 		.ares .tp-tab-image { width: 80px;height: 80px; }
 
-		/* Mobile adjustments for hero slider images */
+		/* Mobile adjustments for hero slider backgrounds (show full cars) */
 		@media (max-width: 768px) {
-			.swiper-slide img {
-				transform: scale(0.75);
-				transform-origin: center center;
+			#slider {
+				min-height: 80vh;
+			}
+
+			#slider .swiper-slide-bg {
+				background-size: contain !important;
+				background-position: center top;
+				background-repeat: no-repeat;
+			}
+
+			#slider .slider-caption {
+				padding-top: 46vh;
 			}
 		}
 
