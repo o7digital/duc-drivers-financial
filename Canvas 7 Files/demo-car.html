@@ -89,6 +89,55 @@
 			}
 		}
 
+		/* Align feature icons in Cómo funciona */
+		.como-funciona-list .feature-box {
+			display: flex;
+			align-items: flex-start;
+			gap: 16px;
+		}
+
+		.como-funciona-list .feature-box .fbox-icon {
+			width: 56px;
+			height: 56px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 0;
+			flex-shrink: 0;
+		}
+
+		.como-funciona-list .feature-box .fbox-icon a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+		}
+
+		.como-funciona-list .feature-box .fbox-icon i {
+			font-size: 44px;
+			line-height: 1;
+		}
+
+		.como-funciona-list .feature-box .fbox-content {
+			margin-top: 0;
+		}
+
+		@media (max-width: 576px) {
+			.como-funciona-list .feature-box {
+				gap: 12px;
+			}
+
+			.como-funciona-list .feature-box .fbox-icon {
+				width: 48px;
+				height: 48px;
+			}
+
+			.como-funciona-list .feature-box .fbox-icon i {
+				font-size: 38px;
+			}
+		}
+
 	</style>
 
 </head>
@@ -280,7 +329,7 @@
 
 					<div class="row mt-5 mb-5">
 
-						<div class="col-lg-4 col-md-6 mt-5 mb-4">
+						<div class="col-lg-4 col-md-6 mt-5 mb-4 como-funciona-list">
 
 							<div class="heading-block border-bottom-0">
 								<h2 class="text-transform-none ls-0" style="font-size: 44px; line-height: 1.2">Tu Financiamiento para tu Nueva Nissan Versa 2026</h2>
