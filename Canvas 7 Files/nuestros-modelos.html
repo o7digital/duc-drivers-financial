@@ -840,11 +840,14 @@
 
 			jQuery(".price-range").ionRangeSlider({
 				type: "double",
-				grid: true,
-				min: 0,
-				max: 10000,
-				from: 1000,
-				prefix: "$"
+				grid: false,
+				min: 230000,
+				max: 900000,
+				from: 230000,
+				to: 900000,
+				prefix: "$",
+				postfix: " MXN",
+				step: 1000
 			});
 		});
 	</script>
