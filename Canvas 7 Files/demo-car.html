@@ -55,13 +55,22 @@
 			#slider .swiper-slide {
 				height: 100vh;
 				min-height: 100vh;
+				position: relative;
 			}
 
 			#slider .swiper-slide-bg {
-				background-size: 90% auto !important;
-				background-position: center 40%;
+				background-size: 88% auto !important;
+				background-position: center 42%;
 				background-repeat: no-repeat;
 				background-color: #000;
+			}
+
+			#slider .swiper-slide::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.6) 100%);
+				pointer-events: none;
 			}
 
 			#slider .slider-caption {
