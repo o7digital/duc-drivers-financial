@@ -119,9 +119,11 @@
 
 		/* Slider caption overlay tweaks: remove wide dark bar */
 		.slider-caption-bottom.slider-caption-bg {
-			background: transparent !important;
+			background: rgba(40, 40, 40, 0.38) !important;
 			box-shadow: none !important;
-			backdrop-filter: none !important;
+			backdrop-filter: blur(2px);
+			border-radius: 10px;
+			margin: 12px;
 		}
 		.slider-caption-bottom h2,
 		.slider-caption-bottom p {
