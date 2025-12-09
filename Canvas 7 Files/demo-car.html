@@ -51,10 +51,32 @@
 
 		/* Mobile adjustments for hero slider backgrounds (show full cars) */
 		@media (max-width: 768px) {
+			#slider,
+			#slider .swiper-slide {
+				height: 100vh;
+				min-height: 100vh;
+			}
+
 			#slider .swiper-slide-bg {
-				background-size: contain !important;
-				background-position: center center;
+				background-size: 90% auto !important;
+				background-position: center 40%;
 				background-repeat: no-repeat;
+				background-color: #000;
+			}
+
+			#slider .slider-caption {
+				top: 65%;
+				transform: translateY(-50%);
+				padding: 0 20px;
+			}
+
+			#slider .slider-caption h2 {
+				font-size: 36px;
+				line-height: 1.1;
+			}
+
+			#slider .slider-caption .button {
+				margin-top: 14px;
 			}
 		}
 
