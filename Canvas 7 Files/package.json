@@ -20,6 +20,7 @@
   "description": "The Multi-Purpose HTML5 Template",
   "main": "index.html",
   "scripts": {
+    "dev": "browser-sync start -sw --startPath demo-car.html",
     "start": "browser-sync start -sw",
     "start:car": "browser-sync start -sw --startPath demo-car.html",
     "test": "echo \"Error: no test specified\" && exit 1"
