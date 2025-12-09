@@ -6,6 +6,14 @@
     {
       "source": "/demo-car",
       "destination": "/demo-car.html"
+    },
+    {
+      "source": "/nuestros-modelos",
+      "destination": "/nuestros-modelos.html"
+    },
+    {
+      "source": "/demo-car-dealers",
+      "destination": "/nuestros-modelos.html"
     }
   ]
 }
