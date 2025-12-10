@@ -125,14 +125,14 @@
 		.flexslider,
 		.flexslider .slides > li { background: #000 !important; }
 
-		@media (max-width: 768px) {
-			.slider-element .slide { min-height: 320px; }
-			.slider-element .slider-caption-bottom { padding: 16px !important; }
-			.slider-element .slider-caption-bottom h2 { font-size: 1.35rem; }
-			.slider-element .slider-caption-bottom p { font-size: 0.95rem; }
-		}
-
-		/* Footer overrides */
+	@media (max-width: 768px) {
+		.slider-element .slide { min-height: 320px; }
+		.slider-element .slider-caption-bottom { padding: 16px !important; }
+		.slider-element .slider-caption-bottom h2 { font-size: 1.35rem; }
+		/* Keep price & currency on one line on mobile */
+		.slider-element .slider-caption-bottom h2.fw-bold { font-size: 1rem; }
+		.slider-element .slider-caption-bottom p { font-size: 0.76rem; }
+	}		/* Footer overrides */
 		#footer,
 		#footer h4,
 		#footer p,
