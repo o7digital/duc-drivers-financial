@@ -100,6 +100,14 @@
 
 		.primary-menu .menu-link > div { font-size: 1.4em; }
 
+		/* Remove white bands around the hero on dark screens */
+		body,
+		#slider,
+		.slider-element,
+		.fslider,
+		.flexslider,
+		.flexslider .slides > li { background: #000 !important; }
+
 		@media (max-width: 768px) {
 			.slider-element .slide { min-height: 320px; }
 			.slider-element .slider-caption-bottom { padding: 16px !important; }
@@ -829,6 +837,23 @@
 				prefix: "$",
 				postfix: " MXN",
 				step: 1000
+			});
+
+			// Enviar: saltar al slide del modelo seleccionado
+			var sliderMap = {
+				"Versa 2026": 0,
+				"Mazda 3 2026": 0,
+				"Virtus 2025": 2
+			};
+
+			var $flex = jQuery(".fslider .flexslider");
+
+			jQuery("form").on("submit", function (e) {
+				e.preventDefault();
+				var model = jQuery("#filtro-modelo").val();
+				if ($flex.length && typeof sliderMap[model] !== "undefined") {
+					$flex.flexslider(sliderMap[model]);
+				}
 			});
 		});
 	</script>
