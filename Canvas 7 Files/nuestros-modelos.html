@@ -290,7 +290,7 @@
 									<div class="row">
 										<div class="col-12">
 											<label class="text-white">Selecciona Marca</label>
-											<select id="filtro-marca" class="selectpicker customjs" title="Selecciona Marca" data-size="7" data-live-search="true" multiple style="width:100%;">
+											<select id="filtro-marca" class="selectpicker customjs" title="Selecciona Marca" data-size="7" data-live-search="true" style="width:100%;">
 												<optgroup label="Todas las Marcas">
 													<option value="Nissan">Nissan</option>
 													<option value="Mazda">Mazda</option>
@@ -851,8 +851,17 @@
 			jQuery("form").on("submit", function (e) {
 				e.preventDefault();
 				var model = jQuery("#filtro-modelo").val();
-				if ($flex.length && typeof sliderMap[model] !== "undefined") {
-					$flex.flexslider(sliderMap[model]);
+				var slider = $flex.data("flexslider");
+				if (slider && typeof sliderMap[model] !== "undefined") {
+					slider.flexAnimate(sliderMap[model]);
+				}
+			});
+
+			jQuery("#filtro-modelo").on("changed.bs.select", function () {
+				var model = jQuery(this).val();
+				var slider = $flex.data("flexslider");
+				if (slider && typeof sliderMap[model] !== "undefined") {
+					slider.flexAnimate(sliderMap[model]);
 				}
 			});
 		});
