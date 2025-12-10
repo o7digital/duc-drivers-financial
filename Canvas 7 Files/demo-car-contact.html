@@ -45,11 +45,12 @@
 		#footer p,
 		#footer li,
 		#footer span { color: #fff !important; }
-		#footer .widget_links a { color: #fff !important; }
-		#footer .widget_links a:hover { color: #ddd !important; }
-		#footer .footer-widgets-wrap img { display: none !important; }
+			#footer .widget_links a { color: #fff !important; }
+			#footer .widget_links a:hover { color: #ddd !important; }
+			#footer .footer-widgets-wrap img { display: none !important; }
+			.primary-menu .menu-link > div { font-size: 1.4em; }
 
-	</style>
+		</style>
 
 </head>
 
@@ -81,12 +82,12 @@
 								<div class="css3-spinner-scaler"></div>
 							</div>
 						</div>
-						<input type="text" class="required form-control mb-2" id="quick-contact-form-name" name="quick-contact-form-name" value="" placeholder="Full Name">
-						<input type="text" class="required form-control email mb-2" id="quick-contact-form-email" name="quick-contact-form-email" value="" placeholder="Email Address">
-						<textarea class="required form-control mb-2 short-textarea" id="quick-contact-form-message" name="quick-contact-form-message" rows="4" cols="30" placeholder="Message"></textarea>
+						<input type="text" class="required form-control mb-2" id="quick-contact-form-name" name="quick-contact-form-name" value="" placeholder="Nombre y Apellidos">
+						<input type="text" class="required form-control email mb-2" id="quick-contact-form-email" name="quick-contact-form-email" value="" placeholder="Correo electrónico">
+						<textarea class="required form-control mb-2 short-textarea" id="quick-contact-form-message" name="quick-contact-form-message" rows="4" cols="30" placeholder="Cuéntanos tu necesidad de financiamiento"></textarea>
 						<input type="text" class="d-none" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" value="">
 						<input type="hidden" name="prefix" value="quick-contact-form-">
-						<button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="button button-small button-3d m-0" value="submit">Send Email</button>
+						<button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="button button-small button-3d m-0" value="submit">Enviar</button>
 					</form>
 
 				</div>
@@ -231,43 +232,42 @@
 									</div>
 
 									<div class="col-md-4 form-group">
-										<label for="template-contactform-name">Name <small>*</small></label>
-										<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="form-control border-form-control required">
+										<label for="template-contactform-name">Nombre <small>*</small></label>
+										<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="form-control border-form-control required" placeholder="Nombre(s)">
 									</div>
 
 									<div class="col-md-4 form-group">
-										<label for="template-contactform-email">Email <small>*</small></label>
-										<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email form-control border-form-control">
+										<label for="template-contactform-lastname">Apellidos <small>*</small></label>
+										<input type="text" id="template-contactform-lastname" name="template-contactform-lastname" value="" class="form-control border-form-control required" placeholder="Apellidos">
 									</div>
 
 									<div class="col-md-4 form-group">
-										<label for="template-contactform-phone">Phone</label>
-										<input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="form-control border-form-control">
+										<label for="template-contactform-email">Correo electrónico <small>*</small></label>
+										<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email form-control border-form-control" placeholder="correo@ejemplo.com">
 									</div>
 
 									<div class="w-100"></div>
 
 									<div class="col-md-8 form-group">
-										<label for="template-contactform-subject">Subject <small>*</small></label>
-										<input type="text" id="template-contactform-subject" name="subject" value="" class="required form-control border-form-control">
+										<label for="template-contactform-phone">Teléfono</label>
+										<input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="form-control border-form-control" placeholder="10 dígitos">
 									</div>
 
 									<div class="col-md-4 form-group">
-										<label for="template-contactform-service">Services</label>
-										<select id="template-contactform-service" name="template-contactform-service" class="form-select border-form-control">
-											<option value="">-- Select One --</option>
-											<option value="Wordpress">Wordpress</option>
-											<option value="PHP / MySQL">PHP / MySQL</option>
-											<option value="HTML5 / CSS3">HTML5 / CSS3</option>
-											<option value="Graphic Design">Graphic Design</option>
-										</select>
+										<label for="template-contactform-service">Tipo de vehículo</label>
+										<input type="text" id="template-contactform-service" name="template-contactform-service" class="form-control border-form-control" placeholder="Ej. Sedan, SUV, Pickup">
 									</div>
 
 									<div class="w-100"></div>
 
+									<div class="col-md-6 form-group">
+										<label for="template-contactform-budget">Presupuesto estimado</label>
+										<input type="text" id="template-contactform-budget" name="template-contactform-budget" class="form-control border-form-control" placeholder="$ MXN">
+									</div>
+
 									<div class="col-12 form-group">
-										<label for="template-contactform-message">Message <small>*</small></label>
-										<textarea class="required form-control border-form-control" id="template-contactform-message" name="template-contactform-message" rows="5" cols="30"></textarea>
+										<label for="template-contactform-message">Comentarios</label>
+										<textarea class="required form-control border-form-control" id="template-contactform-message" name="template-contactform-message" rows="5" cols="30" placeholder="Cuéntanos qué unidad necesitas y para qué plataforma trabajas"></textarea>
 									</div>
 
 									<div class="col-12 form-group d-none">
@@ -275,14 +275,7 @@
 									</div>
 
 									<div class="col-12 form-group">
-
-										<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-										<div class="g-recaptcha" data-sitekey="6LfijgUTAAAAACPt-XfRbQszAKAJY0yZDjjhMUQT"></div>
-
-									</div>
-
-									<div class="col-12 form-group">
-										<button class="button button-3d m-0" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Send Message</button>
+										<button class="button button-3d m-0" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Enviar</button>
 									</div>
 
 									<input type="hidden" name="prefix" value="template-contactform-">
