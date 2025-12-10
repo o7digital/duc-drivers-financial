@@ -237,6 +237,26 @@
 						<div class="fslider h-100 shadow-sm" data-arrows="true" data-autoplay="6000" data-loop="true">
 							<div class="flexslider h-100">
 								<div class="slider-wrap h-100">
+									<div class="slide h-100" style="background: url('public/cotizador/nissan/nissa-sr.webp') center center; background-size: cover;">
+										<div class="slide-caption bg-dark card shadow-sm ms-4"><div class="card-body fw-semibold py-1 px-2 text-light">2026</div></div>
+										<div class="slide-caption d-flex justify-content-between align-items-center flex-row dark slider-caption-bottom bg-dark slider-caption-bg py-4 px-4">
+											<div class="w-75">
+												<h2 class="mb-1">Nissan Versa 2026</h2>
+												<p class="fw-light text-white-50 mb-0">Eficiencia y Comodidad para conductores con Versa 2026.</p>
+											</div>
+											<h2 class="fw-bold h2 mb-0">$329,900.00 MXN</h2>
+										</div>
+									</div>
+									<div class="slide h-100" style="background: url('public/cotizador/nissan/versa-sr-back.webp') center center; background-size: cover;">
+										<div class="slide-caption bg-dark card shadow-sm ms-4"><div class="card-body fw-semibold py-1 px-2 text-light">2026</div></div>
+										<div class="slide-caption d-flex justify-content-between align-items-center flex-row dark slider-caption-bottom bg-dark slider-caption-bg py-4 px-4">
+											<div class="w-75">
+												<h2 class="mb-1">Nissan Versa 2026</h2>
+												<p class="fw-light text-white-50 mb-0">Diseño elegante con tecnología de conectividad avanzada.</p>
+											</div>
+											<h2 class="fw-bold h2 mb-0">$329,900.00 MXN</h2>
+										</div>
+									</div>
 									<div class="slide h-100" style="background: url('public/cotizador/mazda/mazda.webp') center center; background-size: cover;">
 										<div class="slide-caption bg-dark card shadow-sm ms-4"><div class="card-body fw-semibold py-1 px-2 text-light">2026</div></div>
 										<div class="slide-caption d-flex justify-content-between align-items-center flex-row dark slider-caption-bottom bg-dark slider-caption-bg py-4 px-4">
@@ -290,19 +310,13 @@
 									<div class="row">
 										<div class="col-12">
 											<label class="text-white">Selecciona Marca</label>
-											<select id="filtro-marca" class="selectpicker customjs" title="Selecciona Marca" data-size="7" data-live-search="true" style="width:100%;">
-												<optgroup label="Todas las Marcas">
-													<option value="Nissan">Nissan</option>
-													<option value="Mazda">Mazda</option>
-													<option value="Chevrolet">Chevrolet</option>
-													<option value="BYD">BYD</option>
-													<option value="Mitsubishi">Mitsubishi</option>
-													<option value="Geely">Geely</option>
-													<option value="MG">MG</option>
-													<option value="Kia">Kia</option>
-													<option value="Hyundai">Hyundai</option>
-												</optgroup>
-											</select>
+										<select id="filtro-marca" class="selectpicker customjs" title="Selecciona Marca" data-size="7" data-live-search="true" style="width:100%;">
+											<optgroup label="Todas las Marcas">
+												<option value="Nissan">Nissan</option>
+												<option value="Mazda">Mazda</option>
+												<option value="Volkswagen">Volkswagen</option>
+											</optgroup>
+										</select>
 										</div>
 										<div class="col-12 mt-3">
 											<label class="text-white">Selecciona Modelo</label>
@@ -315,27 +329,6 @@
 												</optgroup>
 												<optgroup label="Volkswagen">
 													<option value="Virtus 2025">Virtus 2025</option>
-												</optgroup>
-												<optgroup label="Chevrolet">
-													<option value="Aveo 2026">Aveo 2026</option>
-												</optgroup>
-												<optgroup label="BYD">
-													<option value="Seal 2026">Seal 2026</option>
-												</optgroup>
-												<optgroup label="Mitsubishi">
-													<option value="Mirage G4 2026">Mirage G4 2026</option>
-												</optgroup>
-												<optgroup label="Geely">
-													<option value="Geely">Geely</option>
-												</optgroup>
-												<optgroup label="MG">
-													<option value="MG Grand">MG Grand</option>
-												</optgroup>
-												<optgroup label="Kia">
-													<option value="Kia">Kia</option>
-												</optgroup>
-												<optgroup label="Hyundai">
-													<option value="Grand i10 2026">Grand i10 2026</option>
 												</optgroup>
 											</select>
 										</div>
@@ -842,8 +835,8 @@
 			// Enviar: saltar al slide del modelo seleccionado
 			var sliderMap = {
 				"Versa 2026": 0,
-				"Mazda 3 2026": 0,
-				"Virtus 2025": 2
+				"Virtus 2025": 1,
+				"Mazda 3 2026": 2
 			};
 
 			var $flex = jQuery(".fslider .flexslider");
