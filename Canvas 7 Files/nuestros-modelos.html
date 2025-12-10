@@ -251,7 +251,7 @@
 
 				<div class="row align-items-stretch flex-md-row-reverse mx-0">
 					<div class="col-md-8 col-sm-12 px-0 min-vh-50">
-						<div class="fslider h-100 shadow-sm" data-arrows="true" data-autoplay="6000" data-loop="true">
+						<div class="fslider h-100 shadow-sm slider-nissan" data-arrows="true" data-autoplay="6000" data-loop="true">
 							<div class="flexslider h-100">
 								<div class="slider-wrap h-100">
 									<div class="slide h-100" style="background: url('public/cotizador/nissan/nissa-sr.webp') center center; background-size: cover;">
@@ -274,6 +274,12 @@
 											<h2 class="fw-bold h2 mb-0">$329,900.00 MXN</h2>
 										</div>
 									</div>
+								</div>
+							</div>
+						</div>
+						<div class="fslider h-100 shadow-sm slider-mazda" data-arrows="true" data-autoplay="6000" data-loop="true" style="display: none;">
+							<div class="flexslider h-100">
+								<div class="slider-wrap h-100">
 									<div class="slide h-100" style="background: url('public/cotizador/mazda/mazda.webp') center center; background-size: cover;">
 										<div class="slide-caption bg-dark card shadow-sm ms-4"><div class="card-body fw-semibold py-1 px-2 text-light">2026</div></div>
 										<div class="slide-caption d-flex justify-content-between align-items-center flex-row dark slider-caption-bottom bg-dark slider-caption-bg py-4 px-4">
@@ -294,6 +300,12 @@
 											<h2 class="fw-bold h2 mb-0">$367,900.00 MXN</h2>
 										</div>
 									</div>
+								</div>
+							</div>
+						</div>
+						<div class="fslider h-100 shadow-sm slider-volkswagen" data-arrows="true" data-autoplay="6000" data-loop="true" style="display: none;">
+							<div class="flexslider h-100">
+								<div class="slider-wrap h-100">
 									<div class="slide h-100" style="background: url('public/cotizador/vw/vw-virtus.webp') center center; background-size: cover;">
 										<div class="slide-caption bg-dark card shadow-sm ms-4"><div class="card-body fw-semibold py-1 px-2 text-light">2026</div></div>
 										<div class="slide-caption d-flex justify-content-between align-items-center flex-row dark slider-caption-bottom bg-dark slider-caption-bg py-4 px-4">
@@ -849,31 +861,45 @@
 				step: 1000
 			});
 
-			// Enviar: saltar al slide del modelo seleccionado
-			var sliderMap = {
-				"Versa 2026": 0,
-				"Virtus 2025": 1,
-				"Mazda 3 2026": 2
+			// Mapping marque -> modèle -> slider
+			var brandModelMap = {
+				"Nissan": { model: "Versa 2026", slider: ".slider-nissan" },
+				"Mazda": { model: "Mazda 3 2026", slider: ".slider-mazda" },
+				"Volkswagen": { model: "Virtus 2025", slider: ".slider-volkswagen" }
 			};
 
-			var $flex = jQuery(".fslider .flexslider");
-
-			jQuery("form").on("submit", function (e) {
-				e.preventDefault();
-				var model = jQuery("#filtro-modelo").val();
-				var slider = $flex.data("flexslider");
-				if (slider && typeof sliderMap[model] !== "undefined") {
-					slider.flexAnimate(sliderMap[model]);
+			// Fonction pour afficher le slider correspondant à la marque
+			function showSliderForBrand(brand) {
+				// Cacher tous les sliders
+				jQuery('.fslider').hide();
+				
+				// Afficher le slider de la marque sélectionnée
+				var config = brandModelMap[brand];
+				if (config) {
+					jQuery(config.slider).show();
+					
+					// Sélectionner automatiquement le modèle
+					jQuery("#filtro-modelo").val(config.model);
+					jQuery("#filtro-modelo").selectpicker('refresh');
 				}
+			}
+
+			// Quand on change la marque
+			jQuery("#filtro-marca").on("changed.bs.select", function() {
+				var brand = jQuery(this).val();
+				showSliderForBrand(brand);
 			});
 
-			jQuery("#filtro-modelo").on("changed.bs.select", function () {
-				var model = jQuery(this).val();
-				var slider = $flex.data("flexslider");
-				if (slider && typeof sliderMap[model] !== "undefined") {
-					slider.flexAnimate(sliderMap[model]);
-				}
-			});
+			// Initialiser avec la première marque si rien n'est sélectionné
+			var initialBrand = jQuery("#filtro-marca").val();
+			if (initialBrand) {
+				showSliderForBrand(initialBrand);
+			} else {
+				// Par défaut afficher Nissan
+				jQuery("#filtro-marca").val("Nissan");
+				jQuery("#filtro-marca").selectpicker('refresh');
+				showSliderForBrand("Nissan");
+			}
 		});
 	</script>
 
