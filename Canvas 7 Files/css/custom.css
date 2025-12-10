@@ -5,3 +5,31 @@
 	Overwriting Default Theme Styles for Better Handling Updates
 -----------------------------------------------------------------*/
 
+.slider-container,
+.swiper-container,
+.swiper-slide,
+.slide-wrapper {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: #000 !important;
+}
+
+.slider-container img,
+.swiper-slide img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 768px) {
+  .hero,
+  .slider-container {
+    height: 100dvh !important; /* corrige le bug iPhone */
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+  }
+}
+
