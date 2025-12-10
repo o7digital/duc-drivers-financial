@@ -43,6 +43,60 @@
 	<title>DUC Drivers Financial | Solución financiera para tu vehículo</title>
 
 	<style>
+		/* FIX: Remove white line at top of page */
+		html, body { 
+			margin: 0 !important; 
+			padding: 0 !important; 
+			overflow-x: hidden;
+		}
+		#wrapper { 
+			margin: 0 !important; 
+			padding: 0 !important; 
+		}
+		#header { 
+			position: absolute !important;
+			top: 0 !important;
+			left: 0 !important;
+			right: 0 !important;
+			z-index: 1000 !important;
+			margin: 0 !important;
+		}
+		#slider { 
+			margin: 0 !important; 
+			padding: 0 !important; 
+			position: relative !important;
+			top: 0 !important;
+			height: 100vh !important;
+			min-height: 100vh !important;
+		}
+		.slider-element { 
+			margin: 0 !important; 
+			padding: 0 !important; 
+			height: 100vh !important;
+			min-height: 100vh !important;
+		}
+		.swiper-wrapper, .swiper-parent {
+			margin: 0 !important;
+			padding: 0 !important;
+			height: 100vh !important;
+		}
+		.swiper-slide {
+			margin: 0 !important;
+			padding: 0 !important;
+			height: 100vh !important;
+		}
+		.swiper-slide-bg {
+			position: absolute !important;
+			top: 0 !important;
+			left: 0 !important;
+			width: 100% !important;
+			height: 100% !important;
+			background-size: cover !important;
+			background-position: center 10% !important;
+			background-repeat: no-repeat !important;
+			background-color: #000 !important;
+		}
+		
 		/* Revolution Slider */
 		.ares .tp-tab { border: 1px solid #eee; }
 		.ares .tp-tab-content { margin-top: -4px; }
@@ -53,24 +107,25 @@
 		@media (max-width: 768px) {
 			#slider,
 			#slider .swiper-slide {
-				height: 100vh;
-				min-height: 100vh;
+				height: 100vh !important;
+				min-height: 100vh !important;
 				position: relative;
 			}
 
 			#slider .swiper-slide-bg {
-				background-size: 88% auto !important;
-				background-position: center 42%;
-				background-repeat: no-repeat;
-				background-color: #000;
+				background-size: 100% auto !important;
+				background-position: center 12% !important;
+				background-repeat: no-repeat !important;
+				background-color: #000 !important;
+				position: absolute !important;
+				top: 0 !important;
+				left: 0 !important;
+				right: 0 !important;
+				bottom: 0 !important;
 			}
 
 			#slider .swiper-slide::after {
-				content: "";
-				position: absolute;
-				inset: 0;
-				background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.6) 100%);
-				pointer-events: none;
+				display: none !important;
 			}
 
 			#slider .slider-caption {
@@ -143,22 +198,20 @@
 		/* Menu sizing aligned with modelos */
 			.primary-menu .menu-link > div { font-size: 1.4em; }
 
-			body,
-			#slider,
-			.slider-element,
-			.swiper-slide { background: #000 !important; }
-
-			/* Align feature icons */
-			.feature-box.fbox-plain .fbox-icon {
-				width: 48px;
-			height: 48px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			margin-top: 4px;
-		}
-
-		.como-funciona-list .feature-box .fbox-content {
+		body,
+		#slider,
+		.slider-element,
+		.swiper-slide { background: #000 !important; }
+		
+		/* Align feature icons */
+		.feature-box.fbox-plain .fbox-icon {
+			width: 48px;
+		height: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 4px;
+	}		.como-funciona-list .feature-box .fbox-content {
 			margin-top: 0;
 		}
 
@@ -281,7 +334,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide-bg" style="background-image: url('/public/nissan.png');"></div>
+						<div class="swiper-slide-bg" style="background-image: url('demos/car/images/nissan.png');"></div>
 					</div>
 					<div class="swiper-slide dark">
 						<div class="container">
@@ -293,7 +346,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide-bg" style="background-image: url('/public/slider-virtus.webp');"></div>
+						<div class="swiper-slide-bg" style="background-image: url('demos/car/images/slider-virtus.webp');"></div>
 					</div>
 					<div class="swiper-slide dark">
 						<div class="container">
@@ -305,7 +358,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide-bg" style="background-image: url('/public/slider-mazda.webp');"></div>
+						<div class="swiper-slide-bg" style="background-image: url('demos/car/images/slider-mazda.webp');"></div>
 					</div>
 					<div class="swiper-slide dark">
 								<div class="container">
