@@ -165,7 +165,7 @@
 
 								<div class="form-result"></div>
 
-								<form class="row mb-0" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
+								<form class="row mb-0" id="template-contactform" name="template-contactform" action="https://formspree.io/f/xjknqbvj" method="post">
 
 									<div class="form-process">
 										<div class="css3-spinner">
@@ -221,6 +221,7 @@
 							</div>
 							
 							<input type="hidden" name="prefix" value="template-contactform-">
+							<input type="hidden" name="_subject" value="Nuevo contacto desde demo-car-contact">
 
 								</form>
 
@@ -335,6 +336,47 @@
 	============================================= -->
 	<script src="js/plugins.min.js"></script>
 	<script src="js/functions.bundle.js"></script>
+	<script>
+		// Envoi du formulaire principal vers Formspree avec feedback en page
+		(function() {
+			const form = document.getElementById('template-contactform');
+			if (!form) return;
+
+			const formResult = form.closest('.form-widget')?.querySelector('.form-result');
+			const loader = form.querySelector('.form-process');
+			const endpoint = form.getAttribute('action') || 'https://formspree.io/f/xjknqbvj';
+
+			function showMessage(html) {
+				if (!formResult) return;
+				formResult.innerHTML = html;
+			}
+
+			form.addEventListener('submit', function(e) {
+				e.preventDefault();
+				if (loader) loader.style.display = 'block';
+				showMessage('');
+
+				const data = new FormData(form);
+				data.append('_subject', 'Nuevo contacto desde demo-car-contact');
+
+				fetch(endpoint, {
+					method: 'POST',
+					body: data,
+					headers: { 'Accept': 'application/json' }
+				}).then(function(resp) {
+					if (!resp.ok) throw new Error('Network response was not ok');
+					return resp.json().catch(() => ({}));
+				}).then(function() {
+					showMessage('<div class="alert alert-success m-0 mt-3">¡Gracias! Hemos recibido tu mensaje.</div>');
+					form.reset();
+				}).catch(function() {
+					showMessage('<div class="alert alert-danger m-0 mt-3">No se pudo enviar. Inténtalo de nuevo en unos minutos.</div>');
+				}).finally(function() {
+					if (loader) loader.style.display = 'none';
+				});
+			});
+		})();
+	</script>
 
 </body>
 </html>
