@@ -1,11 +1,5 @@
 {
-  "buildCommand": "mkdir -p public && cp public/403.html public/index.html",
+  "buildCommand": "mkdir -p public && cp 'Canvas 7 Files/demo-car.html' public/index.html",
   "outputDirectory": "public",
-  "cleanUrls": true,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/403.html"
-    }
-  ]
+  "cleanUrls": true
 }
