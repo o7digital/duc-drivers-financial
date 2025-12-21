@@ -1,19 +1,11 @@
 {
-  "buildCommand": "cp -r \"Canvas 7 Files\"/* . && cp \"Canvas 7 Files/demo-car.html\" index.html",
-  "outputDirectory": ".",
+  "buildCommand": "mkdir -p public && cp public/403.html public/index.html",
+  "outputDirectory": "public",
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/demo-car",
-      "destination": "/demo-car.html"
-    },
-    {
-      "source": "/nuestros-modelos",
-      "destination": "/nuestros-modelos.html"
-    },
-    {
-      "source": "/demo-car-dealers",
-      "destination": "/nuestros-modelos.html"
+      "source": "/(.*)",
+      "destination": "/403.html"
     }
   ]
 }
