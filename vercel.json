@@ -1,5 +1,5 @@
 {
-  "buildCommand": "mkdir -p public && cp 'Canvas 7 Files/demo-car.html' public/index.html",
+  "buildCommand": "cp -r 'Canvas 7 Files'/* public/ && cp 'Canvas 7 Files/demo-car.html' public/index.html",
   "outputDirectory": "public",
   "cleanUrls": true
 }
