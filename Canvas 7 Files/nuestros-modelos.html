@@ -43,6 +43,23 @@
 		.dark .irs-bar { background-color: #CCC }
 		.dark .irs-grid-text { color: #EEE }
 
+		/* Fix dropdown white rectangle background */
+		.bootstrap-select .dropdown-menu {
+			background-color: rgb(47, 47, 47) !important;
+		}
+		.bootstrap-select .dropdown-menu li a {
+			color: #fff !important;
+		}
+		.bootstrap-select .dropdown-menu li a:hover,
+		.bootstrap-select .dropdown-menu li.active a,
+		.bootstrap-select .dropdown-menu li.selected a {
+			background-color: rgb(60, 60, 60) !important;
+			color: #fff !important;
+		}
+		.bootstrap-select .dropdown-menu .optgroup-label {
+			color: #aaa !important;
+		}
+
 		.slide-caption {
 			position: absolute;
 			opacity: 0;
@@ -93,6 +110,50 @@
 			-webkit-transition: opacity .4s .6s;
 			-o-transition: opacity .4s .6s;
 			transition: opacity .4s .6s;
+		}
+
+		#footer a { color: #fff !important; }
+		#footer a:hover { color: #ddd !important; }
+
+		.primary-menu .menu-link > div { font-size: 1.4em; }
+
+		/* Remove white bands around the hero on dark screens */
+		body,
+		#slider,
+		.slider-element,
+		.fslider,
+		.flexslider,
+		.flexslider .slides > li { background: #000 !important; }
+
+	@media (max-width: 768px) {
+		.slider-element .slide { min-height: 320px; }
+		.slider-element .slider-caption-bottom { padding: 16px !important; }
+		.slider-element .slider-caption-bottom h2 { font-size: 1.35rem; }
+		/* Keep price & currency on one line on mobile */
+		.slider-element .slider-caption-bottom h2.fw-bold { font-size: 1rem; }
+		.slider-element .slider-caption-bottom p { font-size: 0.76rem; }
+	}		/* Footer overrides */
+		#footer,
+		#footer h4,
+		#footer p,
+		#footer li,
+		#footer span { color: #fff !important; }
+		#footer .widget_links a { color: #fff !important; }
+		#footer .widget_links a:hover { color: #ddd !important; }
+		#footer .footer-widgets-wrap img { display: none !important; }
+
+		/* Slider caption overlay tweaks: remove wide dark bar */
+		.slider-caption-bottom.slider-caption-bg {
+			background: rgba(40, 40, 40, 0.38) !important;
+			box-shadow: none !important;
+			backdrop-filter: blur(2px);
+			border-radius: 10px;
+			margin: 12px;
+		}
+		.slider-caption-bottom h2,
+		.slider-caption-bottom p {
+			color: #f8f9fa !important;
+			text-shadow: 0 2px 8px rgba(0,0,0,0.45);
 		}
 
 	</style>
@@ -159,7 +220,7 @@
 						============================================= -->
 						<div id="logo" class="me-lg-0 ms-lg-auto">
 							<a href="demo-car.html">
-								<img class="logo-default" srcset="demos/car/images/logo.png, demos/car/images/logo@2x.png 2x" src="demos/car/images/logo@2x.png" alt="Canvas Logo">
+								<h2 class="mb-0 text-white fw-bold">DUC DRIVERS FINANCING SA DE CV</h2>
 							</a>
 						</div><!-- #logo end -->
 
@@ -169,55 +230,15 @@
 							</button>
 						</div>
 
-						<!-- Primary Navigation
-						============================================= -->
-						<nav class="primary-menu with-arrows">
-							<ul class="menu-container">
-								<li class="menu-item current"><a class="menu-link" href="demo-car.html"><div>Home</div></a></li>
-								<!-- Mega Menu -->
-								<li class="menu-item mega-menu"><a class="menu-link" href="demo-car-single.html"><div>Models</div></a>
-									<div class="mega-menu-content mega-menu-style-2">
-										<div class="container">
-											<div class="row">
-												<ul class="sub-menu-container mega-menu-column col-12">
-													<li class="menu-item">
-														<div class="widget text-center">
-
-															<h3 class="mb-0">Featured Models</h3>
-															<a href="#" class="button button-small button-rounded button-border button-dark button-black font-primary" style="margin: 10px 0 40px">Show all Cars</a>
-
-															<!-- Mega Menu Cars Carousel -->
-															<div class="owl-carousel image-carousel carousel-widget text-center" data-margin="20" data-nav="false" data-pagi="true" data-items-xs="1" data-items-sm="2" data-items-md="4" data-items-lg="6" data-items-xl="6">
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/1.png" alt="Car">BMW 1 Series ActiveE</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/4.png" alt="Car">Mercedes-Benz S-Class</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/5.png" alt="Car">Gran Turismo</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/6.png" alt="Car">Mclaren 675LT SPIDER</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/7.png" alt="Car">Honda City</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/8.png" alt="Car">Toyota Qualis</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/9.png" alt="Car">Honda WR-V</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/10.png" alt="Car">Suzuki Breeza</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/2.png" alt="Car">Chevrolet Spark</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/3.png" alt="Car">Honda JaZZ</a></div>
-
-															</div>
-														</div>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="menu-item"><a class="menu-link" href="demo-car-listing.html"><div>Car Listing</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-car-dealers.html"><div>Dealers</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-car-accessories.html"><div>Accessories</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-car-interiors.html"><div>Interiors</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-car-faqs.html"><div>FAQs</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-car-blog.html"><div>Blog</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-car-contact.html"><div>Contacts</div></a></li>
-							</ul>
-						</nav><!-- #primary-menu end -->
-
-					</div>
+					<!-- Primary Navigation
+					============================================= -->
+					<nav class="primary-menu with-arrows">
+						<ul class="menu-container">
+							<li class="menu-item current"><a class="menu-link" href="demo-car.html"><div>Inicio</div></a></li>
+							<li class="menu-item"><a class="menu-link" href="#" data-lightbox="inline" data-lightbox-url="#financiamiento-form"><div>Financiamiento</div></a></li>
+							<li class="menu-item"><a class="menu-link" href="demo-car-contact.html"><div>Contacto</div></a></li>
+						</ul>
+					</nav><!-- #primary-menu end -->					</div>
 				</div>
 			</div>
 			<div class="header-wrap-clone"></div>
@@ -230,37 +251,16 @@
 
 				<div class="row align-items-stretch flex-md-row-reverse mx-0">
 					<div class="col-md-8 col-sm-12 px-0 min-vh-50">
-						<div class="fslider h-100 shadow-sm" data-arrows="true" data-autoplay="6000" data-loop="true">
+						<div id="model-slider" class="fslider h-100 shadow-sm" data-arrows="true" data-autoplay="6000" data-loop="true">
 							<div class="flexslider h-100">
 								<div class="slider-wrap h-100">
-									<div class="slide h-100" style="background: url('demos/car/images/dealers/1.jpg') center center; background-size: cover;">
-										<div class="slide-caption bg-dark card shadow-sm ms-4"><div class="card-body fw-semibold py-1 px-2 text-light">2011</div></div>
-										<div class="slide-caption d-flex justify-content-between align-items-center flex-row dark slider-caption-bottom bg-dark slider-caption-bg py-4 px-4">
-											<div class="w-75">
-												<h2 class="mb-1">Audi A6 Sportback</h2>
-												<p class="fw-light text-white-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ullam blanditiis voluptas quam iste tenetur laboriosam consectetur dignissimos recusandae, incidunt veritatis fugit!</p>
+									<div class="slide h-100" style="background: url('/public/cotizador/nissan-versa-2.png') center center; background-size: cover;">
+										<div class="slide-caption bg-dark card shadow-sm ms-4"><div class="card-body fw-semibold py-1 px-2 text-light">2026</div></div>
+										<div class="slide-caption d-flex align-items-center flex-row dark slider-caption-bottom bg-dark slider-caption-bg py-4 px-4">
+											<div class="w-100">
+												<h2 class="mb-1">Nissan Versa TM</h2>
+												<p class="fw-light text-white-50 mb-0">Explora nuestras opciones financiadas y encuentra tu modelo ideal.</p>
 											</div>
-											<h2 class="fw-bold h2 mb-0">$15,39,000</h2>
-										</div>
-									</div>
-									<div class="slide h-100" style="background: url('demos/car/images/dealers/2.jpg') center center; background-size: cover;">
-										<div class="slide-caption bg-dark card shadow-sm ms-4"><div class="card-body fw-semibold py-1 px-2 text-light">2012</div></div>
-										<div class="slide-caption d-flex justify-content-between align-items-center flex-row dark slider-caption-bottom bg-dark slider-caption-bg py-4 px-4">
-											<div class="w-75">
-												<h2 class="mb-1">Bentley Continental GT</h2>
-												<p class="fw-light text-white-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ullam blanditiis voluptas quam iste tenetur laboriosam consectetur dignissimos recusandae, incidunt veritatis fugit!</p>
-											</div>
-											<h2 class="fw-bold h2 mb-0">$15,39,000</h2>
-										</div>
-									</div>
-									<div class="slide h-100" style="background: url('demos/car/images/dealers/3.jpg') center center; background-size: cover;">
-										<div class="slide-caption bg-dark card shadow-sm ms-4"><div class="card-body fw-semibold py-1 px-2 text-light">2013</div></div>
-										<div class="slide-caption d-flex justify-content-between align-items-center flex-row dark slider-caption-bottom bg-dark slider-caption-bg py-4 px-4">
-											<div class="w-75">
-												<h2 class="mb-1">BMW Gran Turismo</h2>
-												<p class="fw-light text-white-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos ullam blanditiis voluptas quam iste tenetur laboriosam consectetur dignissimos recusandae, incidunt veritatis fugit!</p>
-											</div>
-											<h2 class="fw-bold h2 mb-0">$15,39,000</h2>
 										</div>
 									</div>
 								</div>
@@ -269,111 +269,29 @@
 					</div>
 
 					<div class="col-md-4 col-sm-12 px-0">
-						<div class="card bg-color rounded-0 shadow-sm p-4 h-100">
+						<div class="card rounded-0 shadow-sm p-4 h-100" style="background-color: #2f2f2f;">
 							<div class="card-body">
-								<h3 class="text-white">Search Your Car:</h3>
-								<form action="#" method="post" class="mb-0">
+								<h3 class="text-white">Busca Tu Auto:</h3>
+								<form action="javascript:void(0);" method="get" class="mb-0">
 									<div class="row">
 										<div class="col-12">
-											<label class="text-white d-block">Type</label>
-											<input class="bt-switch" type="checkbox" checked data-on-text="New" data-off-text="Used" data-on-color="default" data-off-color="default" data-handle-width="50">
+											<label class="text-white">Selecciona Marca</label>
+										<select id="filtro-marca" class="selectpicker customjs" title="Selecciona Marca" data-size="7" data-live-search="true" style="width:100%;">
+											<option value="">Cargando opciones...</option>
+										</select>
 										</div>
 										<div class="col-12 mt-3">
-											<label class="text-white">All Brands</label>
-											<select class="selectpicker customjs" title="Select Brand"  data-size="7" data-live-search="true" multiple style="width:100%;">
-												<optgroup label="All Brands">
-													<option value="Audi">Audi</option>
-													<option value="BMW">BMW</option>
-													<option value="Ferrari">Ferrari</option>
-													<option value="Ford">Ford</option>
-													<option value="Honda">Honda</option>
-													<option value="Mercedes-Benz">Mercedes-Benz</option>
-													<option value="Manza">Manza</option>
-													<option value="Porsche">Porsche</option>
-													<option value="Tayota">Tayota</option>
-												</optgroup>
+											<label class="text-white">Selecciona Modelo</label>
+											<select id="filtro-modelo" class="selectpicker customjs" data-size="7" data-live-search="true" title="Selecciona Modelo" style="width:100%; line-height: 30px;">
+												<option value="">Selecciona una marca primero</option>
 											</select>
 										</div>
-										<div class="col-12 mt-3">
-											<label class="text-white">Select Model</label>
-											<select class="selectpicker customjs" data-size="7" data-live-search="true" title="Select Model" style="width:100%; line-height: 30px;">
-												<optgroup label="AUDI">
-													<option value="R8">Audi R8</option>
-													<option value="TT">Audi TT</option>
-													<option value="S5">Audi S5</option>
-													<option value="A5">Audi A5</option>
-													<option value="TTS">Audi TTS</option>
-													<option value="RS5">Audi RS 5</option>
-												</optgroup>
-												<optgroup label="BMW All Series">
-													<option value="1-Series">BMW 1 Series 5-Door</option>
-													<option value="Series-ActiveE">BMW 1 Series ActiveE</option>
-													<option value="3-Series-Sedan">BMW 3 Series Sedan</option>
-													<option value="ActiveHybrid-3">BMW ActiveHybrid 3</option>
-													<option value="5-Series-Sedan">BMW 5 Series Sedan</option>
-													<option value="ActiveHybrid-5">BMW ActiveHybrid 5</option>
-													<option value="7-Series">BMW 7 Series</option>
-													<option value="ActiveHybrid-7">BMW ActiveHybrid 7</option>
-													<option value="M3-Sedan">BMW M3 Sedan</option>
-													<option value="M5-Sedan">BMW M5 Sedan</option>
-													<option value="3-Series-Turismo">BMW 3 Series Gran Turismo</option>
-													<option value="5=Series-Turismo">BMW 5 Series Gran Turismo</option>
-												</optgroup>
-												<optgroup label="HONDA">
-													<option value="Fit">Honda Fit</option>
-													<option value="City">Honda City</option>
-													<option value="Civic">Honda Civic</option>
-													<option value="Fit-EV1">Honda Fit EV1</option>
-													<option value="Accord">Honda Accord</option>
-													<option value="Crosstour">Honda Crosstour</option>
-													<option value="FCX-Clarity">Honda FCX Clarity</option>
-													<option value="Civic-Hybrid">Honda Civic Hybrid</option>
-													<option value="Accord-Hybrid">Honda Accord Hybrid</option>
-													<option value="Accord-Plug-In">Honda Accord Plug-In</option>
-												</optgroup>
-												<optgroup label="MERCEDES-BENZ">
-													<option value="S-Class">2021 Mercedes-Benz S-Class Sedan</option>
-													<option value="C-Class">2021 Mercedes-Benz C-Class Sedan</option>
-													<option value="E-Class">2021 Mercedes-Benz E-Class Sedan</option>
-													<option value="E-Class-Hybrid">2021 Mercedes-Benz E-Class Hybrid</option>
-													<option value="Maybach-S600">2021 Mercedes-Benz Maybach S600</option>
-													<option value="B-Class-Electric-Drive">2021 Mercedes-Benz B-Class Electric Drive</option>
-												</optgroup>
-												<optgroup label="Ferrari">
-													<option value="Ferrari Daytona">Ferrari Daytona</option>
-													<option value="Ferrari 250 GTO">Ferrari 250 GTO</option>
-													<option value="Ferrari 275">Ferrari 275</option>
-													<option value="Ferrari 599 GTB Fiorano">Ferrari 599 GTB Fiorano</option>
-													<option value="Ferrari F430">Ferrari F430</option>
-													<option value="Ferrari 250">Ferrari 250</option>
-												</optgroup>
-												<optgroup label="Porsche">
-													<option value="Porsche Carrera GT">Porsche Carrera GT</option>
-													<option value="Porsche Boxster">Porsche Boxster</option>
-													<option value="Porsche 911 classic">Porsche 911 classic</option>
-													<option value="Porsche 911">Porsche 911</option>
-													<option value="Porsche Cayman">Porsche Cayman</option>
-													<option value="Porsche Panamera">Porsche Panamera</option>
-													<option value="Porsche 959">Porsche 959</option>
-													<option value="Porsche 356">Porsche 356</option>
-													<option value="Porsche Cayenne">Porsche Cayenne</option>
-													<option value="Porsche 997">Porsche 997</option>
-												</optgroup>
-											</select>
-										</div>
-										<div class="col-12 mt-3 input-daterange travel-date-group">
-											<label class="text-white" for="template-contactform-date">Min Year</label>
-											<input type="text" id="template-contactform-date" name="template-contactform-date" value="" class="form-control text-start">
-											<label class="mt-3 text-white" for="template-contactform-date">Max Year</label>
-											<input type="text" class="form-control text-start" name="template-contactform-end">
-										</div>
-
-										<div class="col-12 mt-3 dark input-daterange travel-date-group">
-											<label class="text-white">Price Range</label>
+										<div class="col-12 mt-3" style="display: none;">
+											<label class="text-white">Rango de Precio</label>
 											<input class="price-range">
 										</div>
 										<div class="col-12 mt-4">
-											<button class="button button-3d button-rounded button-white button-light button-large w-100 m-0">Submit</button>
+											<button class="button button-3d button-rounded button-white button-light button-large w-100 m-0">Enviar</button>
 										</div>
 									</div>
 								</form>
@@ -391,7 +309,7 @@
 
 			<div class="content-wrap py-0">
 
-				<div class="section m-0">
+				<div class="section m-0" id="popular-cars" style="display: none;">
 					<div class="container">
 						<div class="row py-5">
 							<div class="col-md-4 mb-md-3 mb-5">
@@ -464,7 +382,7 @@
 					</div>
 				</div>
 
-				<div class="row border-bottom align-content-stretch flex-wrap">
+				<div class="row border-bottom align-content-stretch flex-wrap" style="display: none;">
 
 					<a href="#" class="col-lg-3 image_fade col-sm-6 p-5 order-1" style="background: url('demos/car/images/dealers/car-wheel.jpg') no-repeat center center / cover;">
 						<div class="p-5 p-sm-0"></div>
@@ -524,7 +442,7 @@
 
 				</div>
 
-				<div class="section m-0">
+				<div class="section m-0" style="display: none;">
 					<div class="container">
 						<div class="heading-block mb-4 text-center">
 							<h2>Popular Cars</h2>
@@ -538,7 +456,7 @@
 							<article class="portfolio-item col-12 col-sm-6 col-lg-4 cf-sedan">
 								<div class="grid-inner">
 									<div class="portfolio-image">
-										<a href="demo-car-dealers.html">
+										<a href="nuestros-modelos">
 											<img src="demos/car/images/filter-cars/1.jpg" alt="Open Imagination">
 											<div class="filter-p-pricing">
 												<span class="p-price fw-bold ls-1">$32,568</span>
@@ -547,7 +465,7 @@
 										</a>
 									</div>
 									<div class="portfolio-desc">
-										<h3><a href="demo-car-dealers.html">Ford Mustang - White</a></h3>
+										<h3><a href="nuestros-modelos">Ford Mustang - White</a></h3>
 										<span>Dramatically synthesize parallel applications vis-a-vis revolutionary e-tailers. Monotonectally incubate cooperative partnerships.</span>
 									</div>
 									<div class="row g-0 car-p-features font-primary">
@@ -565,7 +483,7 @@
 							<article class="portfolio-item col-12 col-sm-6 col-lg-4 cf-suv">
 								<div class="grid-inner">
 									<div class="portfolio-image">
-										<a href="demo-car-dealers.html">
+										<a href="nuestros-modelos">
 											<img src="demos/car/images/filter-cars/2.jpg" alt="Open Imagination">
 											<div class="filter-p-pricing">
 												<span class="p-price fw-bold ls-1">$32,568</span>
@@ -574,7 +492,7 @@
 										</a>
 									</div>
 									<div class="portfolio-desc">
-										<h3><a href="demo-car-dealers.html">Chevrolet Brown Traverse</a></h3>
+										<h3><a href="nuestros-modelos">Chevrolet Brown Traverse</a></h3>
 										<span>Enthusiastically incubate turnkey technologies for exceptional materials. Seamlessly implement emerging scenarios.</span>
 									</div>
 									<div class="row g-0 car-p-features font-primary">
@@ -592,7 +510,7 @@
 							<article class="portfolio-item col-12 col-sm-6 col-lg-4 cf-cabriolet">
 								<div class="grid-inner">
 									<div class="portfolio-image">
-										<a href="demo-car-dealers.html">
+										<a href="nuestros-modelos">
 											<img src="demos/car/images/filter-cars/3.jpg" alt="Open Imagination">
 											<div class="filter-p-pricing">
 												<span class="p-price fw-bold ls-1">$62,300</span>
@@ -601,7 +519,7 @@
 										</a>
 									</div>
 									<div class="portfolio-desc">
-										<h3><a href="demo-car-dealers.html">Audi 2021 S5 Cabriolet</a></h3>
+										<h3><a href="nuestros-modelos">Audi 2021 S5 Cabriolet</a></h3>
 										<span>Competently evolve intuitive synergy without corporate human capital. Monotonectally.</span>
 									</div>
 									<div class="row g-0 car-p-features font-primary">
@@ -618,7 +536,7 @@
 							<article class="portfolio-item col-12 col-sm-6 col-lg-4 cf-cuv">
 								<div class="grid-inner">
 									<div class="portfolio-image">
-										<a href="demo-car-dealers.html">
+										<a href="nuestros-modelos">
 											<img src="demos/car/images/filter-cars/4.jpg" alt="Open Imagination">
 											<div class="filter-p-pricing">
 												<span class="p-price fw-bold ls-1">$32,568</span>
@@ -627,7 +545,7 @@
 										</a>
 									</div>
 									<div class="portfolio-desc">
-										<h3><a href="demo-car-dealers.html">BMW 3 Series, ABS</a></h3>
+										<h3><a href="nuestros-modelos">BMW 3 Series, ABS</a></h3>
 										<span>Energistically engineer user friendly synergy vis-a-vis enabled channels. Rapidiously utilize value-added. Laudantium debitis perferendis obcaecati.</span>
 									</div>
 									<div class="row g-0 car-p-features font-primary">
@@ -644,7 +562,7 @@
 							<article class="portfolio-item col-12 col-sm-6 col-lg-4 cf-supercar">
 								<div class="grid-inner">
 									<div class="portfolio-image">
-										<a href="demo-car-dealers.html">
+										<a href="nuestros-modelos">
 											<img src="demos/car/images/filter-cars/5.jpg" alt="Open Imagination">
 											<div class="filter-p-pricing">
 												<span class="p-price fw-bold ls-1">$32,568</span>
@@ -653,7 +571,7 @@
 										</a>
 									</div>
 									<div class="portfolio-desc">
-										<h3><a href="demo-car-dealers.html">2021 LEXUS IS 200T FSPORT</a></h3>
+										<h3><a href="nuestros-modelos">2021 LEXUS IS 200T FSPORT</a></h3>
 										<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium debitis unde laboriosam perferendis obcaecati.</span>
 									</div>
 									<div class="row g-0 car-p-features font-primary">
@@ -671,7 +589,7 @@
 							<article class="portfolio-item col-12 col-sm-6 col-lg-4 cf-hatchback">
 								<div class="grid-inner">
 									<div class="portfolio-image">
-										<a href="demo-car-dealers.html">
+										<a href="nuestros-modelos">
 											<img src="demos/car/images/filter-cars/6.jpg" alt="Open Imagination">
 											<div class="filter-p-pricing">
 												<span class="p-price fw-bold ls-1">$32,568</span>
@@ -680,7 +598,7 @@
 										</a>
 									</div>
 									<div class="portfolio-desc">
-										<h3><a href="demo-car-dealers.html">Chevrolet T430 Hatchback</a></h3>
+										<h3><a href="nuestros-modelos">Chevrolet T430 Hatchback</a></h3>
 										<span>Appropriately exploit strategic niche markets rather than optimal products. Enthusiastically negotiate perferendis the art methods of empowermen.</span>
 									</div>
 									<div class="row g-0 car-p-features font-primary">
@@ -701,7 +619,7 @@
 
 				<!-- Buy And Sell Section
 				============================================= -->
-				<div class="section m-0 p-0">
+				<div class="section m-0 p-0" style="display: none;">
 					<div class="row align-items-stretch">
 						<!-- Half Section 1 -->
 						<div class="col-lg-6 dark bg-color" style="background: url('demos/car/images/5.jpg') center center no-repeat; background-size: cover;">
@@ -732,7 +650,7 @@
 
 		<!-- Footer
 		============================================= -->
-		<footer id="footer" class="dark border-0" style="background-color: #080808;">
+		<footer id="footer" class="dark border-0" style="background-color: #080808; color: #fff;">
 			<div class="container-fluid px-5">
 				<!-- Footer Widgets
 				============================================= -->
@@ -742,44 +660,32 @@
 						<div class="col-lg-7">
 
 							<div class="row col-mb-30">
-								<div class="col-6 col-lg-3">
+								<div class="col-6 col-lg-4">
 									<div class="widget widget_links widget-li-noicon">
-										<h4>Hire</h4>
+										<h4>INICIO</h4>
 										<ul>
-											<li><a href="#">Documentation</a></li>
-											<li><a href="#">Feedback</a></li>
-											<li><a href="#">Plugins</a></li>
+											<li><a href="demo-car.html">Inicio</a></li>
+											<li><a href="#" data-lightbox="inline" data-lightbox-url="#financiamiento-form">Financiamiento</a></li>
+											<li><a href="demo-car-contact.html">Contacto</a></li>
 										</ul>
 									</div>
 								</div>
-								<div class="col-6 col-lg-3">
+								<div class="col-6 col-lg-4">
 									<div class="widget widget_links widget-li-noicon">
-										<h4>Community</h4>
+										<h4>Ayuda</h4>
 										<ul>
-											<li><a href="#">Documentation</a></li>
-											<li><a href="#">Feedback</a></li>
-											<li><a href="#">Plugins</a></li>
-											<li><a href="#">Support Forums</a></li>
+											<li><a href="#">Asistencia Cliente</a></li>
+										<li><a href="/aviso-privacidad.html" target="_blank">Aviso de Privacidad</a></li>
+											<li><a href="#">Condiciones Generales</a></li>
 										</ul>
 									</div>
 								</div>
-								<div class="col-6 col-lg-3">
+								<div class="col-6 col-lg-4">
 									<div class="widget widget_links widget-li-noicon">
-										<h4>Learn</h4>
+										<h4>Socios</h4>
 										<ul>
-											<li><a href="#">Documentation</a></li>
-											<li><a href="#">Feedback</a></li>
-											<li><a href="#">Plugins</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="col-6 col-lg-3">
-									<div class="widget widget_links widget-li-noicon">
-										<h4>About</h4>
-										<ul>
-											<li><a href="#">Documentation</a></li>
-											<li><a href="#">Feedback</a></li>
-											<li><a href="#">Plugins</a></li>
+										<li><a href="https://grupopicacho.com.mx/" target="_blank" rel="noopener noreferrer">Grupo Picacho</a></li>
+											<li><a href="#">Motornation</a></li>
 										</ul>
 									</div>
 								</div>
@@ -788,12 +694,11 @@
 						</div>
 
 						<div class="col-lg-5 text-center text-lg-end">
-							<img src="demos/car/images/logo-footer.png" alt="Image" height="50">
-							<br>
-							<div style="color: #444">
-								<span>&copy; Canvas Automotive. All Rights Reserved.</span>
+							<div class="fw-bold text-white" style="font-size: 22px;">DUC DRIVERS FINANCING SA DE CV</div>
+							<div class="mt-2" style="color: #fff;">
+								<span>&copy; DUC DRIVERS FINANCING SA DE CV</span>
 								<div class="clear"></div>
-								<p style="margin-top: 10px;">Objectively restore standards compliant opportunities whereas one-to-one collaboration and idea-sharing.</p>
+								<p class="mb-1" style="margin-top: 10px;">Con el Respaldo de GRUPO PICACHO y MOTORNATION</p>
 							</div>
 						</div>
 					</div>
@@ -841,14 +746,183 @@
     			defaultViewDate: { year: 2010, month: 01, day: 01 }
 			});
 
-			jQuery(".price-range").ionRangeSlider({
-				type: "double",
-				grid: true,
-				min: 0,
-				max: 10000,
-				from: 1000,
-				prefix: "$"
+			const carInventory = [
+				{
+					brand: 'Chevrolet',
+					model: 'Aveo HB 2026',
+					year: 2026,
+					price: 241700,
+					description: 'Hatchback eficiente y práctico para la ciudad.',
+					images: ['/public/cotizador/chevrelot-aveo.png']
+				},
+				{
+					brand: 'Chevrolet',
+					model: 'Onix 2026',
+					year: 2026,
+					price: 278100,
+					description: 'Sedán con conectividad y gran rendimiento de combustible.',
+					images: ['/public/cotizador/chevrolet-onix.png']
+				},
+				{
+					brand: 'Chevrolet',
+					model: 'Aveo Sedan 2026',
+					year: 2026,
+					price: 285900,
+					description: 'Espacio para la familia con seguridad básica y bajo consumo.',
+					images: ['/public/aveo.png']
+				},
+				{
+					brand: 'Mazda',
+					model: 'Mazda 2 Sedan',
+					year: 2025,
+					price: 301900,
+					description: 'Estilo Kodo con conectividad Mazda Connect y motor Skyactiv-G.',
+					images: ['/public/cotizador/mazda-2.png']
+				},
+				{
+					brand: 'Mitsubishi',
+					model: 'Mirage G4',
+					year: 2025,
+					price: 294400,
+					description: 'Subcompacto ligero con maniobrabilidad urbana y eficiencia.',
+					images: ['/public/cotizador/mitzubishi-mirage-g4.png']
+				},
+				{
+					brand: 'MG',
+					model: 'MG5',
+					year: 2025,
+					price: 249900,
+					description: 'Sedán con pantalla táctil, conectividad y amplia cajuela.',
+					images: ['/public/cotizador/mg-mg5.png']
+				},
+				{
+					brand: 'Hyundai',
+					model: 'Grand i10 SD GL TM',
+					year: 2025,
+					price: 297700,
+					description: 'Compacto versátil con buen equipamiento de seguridad.',
+					images: ['/public/cotizador/hundai-grand.png']
+				},
+				{
+					brand: 'Nissan',
+					model: 'Versa TM',
+					year: 2026,
+					price: 292900,
+					description: 'Versión TM con asistencias de manejo y amplio interior.',
+					images: ['/public/cotizador/nissan-versa-2.png']
+				},
+				{
+					brand: 'VW',
+					model: 'Virtus Trendline 2025',
+					year: 2025,
+					price: 289990,
+					description: 'Trendline con motor TSI y espacio líder en su segmento.',
+					images: ['/public/cotizador/vw-virtus2.png']
+				},
+				{
+					brand: 'Renault',
+					model: 'Intense TM',
+					year: 2025,
+					price: 250000,
+					description: 'Equipamiento Intense con conectividad y eficiencia urbana.',
+					images: ['/public/cotizador/renault-intense.png']
+				}
+			];
+
+			const brandOrder = [...new Set(carInventory.map(car => car.brand))];
+			const modelsByBrand = carInventory.reduce((acc, car) => {
+				acc[car.brand] = acc[car.brand] || [];
+				acc[car.brand].push(car);
+				return acc;
+			}, {});
+
+			const brandSelect = jQuery("#filtro-marca");
+			const modelSelect = jQuery("#filtro-modelo");
+			const sliderEl = jQuery("#model-slider");
+			const queryParams = new URLSearchParams(window.location.search);
+
+			function populateBrandOptions(selectedBrand) {
+				brandSelect.empty();
+				brandOrder.forEach(brand => {
+					brandSelect.append(`<option value="${brand}">${brand}</option>`);
+				});
+
+				if (selectedBrand && modelsByBrand[selectedBrand]) {
+					brandSelect.val(selectedBrand);
+				} else if (brandOrder.length) {
+					brandSelect.val(brandOrder[0]);
+				}
+
+				brandSelect.selectpicker('refresh');
+			}
+
+			function populateModelOptions(brand, selectedModel) {
+				modelSelect.empty();
+				const models = modelsByBrand[brand] || [];
+
+				if (!models.length) {
+					modelSelect.append('<option value="">Sin modelos disponibles</option>');
+				} else {
+					models.forEach(car => modelSelect.append(`<option value="${car.model}">${car.model}</option>`));
+					const preferred = selectedModel && models.find(car => car.model === selectedModel);
+					modelSelect.val((preferred && preferred.model) || models[0].model);
+				}
+
+				modelSelect.selectpicker('refresh');
+			}
+
+			function findCar(brand, model) {
+				const models = modelsByBrand[brand] || [];
+				return models.find(car => car.model === model) || models[0] || carInventory[0];
+			}
+
+			function updateSliderForCar(car) {
+				if (!car) return;
+				const slides = sliderEl.find('.slide');
+				const images = (car.images && car.images.length) ? car.images : ['/demos/car/images/filter-cars/1.jpg'];
+
+				slides.each(function(index) {
+					const slide = jQuery(this);
+					const imageUrl = images[index % images.length];
+
+					slide.css({
+						background: `url('${imageUrl}') center center`,
+						'background-size': 'cover'
+					});
+
+					slide.find('.card-body').text(car.year || '');
+					slide.find('h2.mb-1').text(`${car.brand} ${car.model}`);
+					slide.find('p').text(car.description || 'Consulta disponibilidad y planes de financiamiento.');
+				});
+
+				const flex = sliderEl.find('.flexslider').data('flexslider');
+				if (flex && typeof flex.flexAnimate === 'function') {
+					flex.flexAnimate(0);
+				}
+			}
+
+			function handleSelectionChange() {
+				const brand = brandSelect.val();
+				const model = modelSelect.val();
+				const car = findCar(brand, model);
+				updateSliderForCar(car);
+			}
+
+			const queryBrand = queryParams.get('marca');
+			const queryModel = queryParams.get('modelo');
+
+			populateBrandOptions(queryBrand);
+			const initialBrand = brandSelect.val();
+			populateModelOptions(initialBrand, queryModel);
+			handleSelectionChange();
+
+			brandSelect.on('changed.bs.select', function() {
+				const brand = jQuery(this).val();
+				populateModelOptions(brand);
+				handleSelectionChange();
 			});
+
+			modelSelect.on('changed.bs.select', handleSelectionChange);
 		});
 	</script>
 
