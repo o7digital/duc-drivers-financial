@@ -40,180 +40,88 @@
 
 		.border-form-control { border-color: #DDD }
 
-	</style>
+		#footer,
+		#footer h4,
+		#footer p,
+		#footer li,
+		#footer span { color: #fff !important; }
+			#footer .widget_links a { color: #fff !important; }
+			#footer .widget_links a:hover { color: #ddd !important; }
+			#footer .footer-widgets-wrap img { display: none !important; }
+			.primary-menu .menu-link > div { font-size: 1.4em; }
+
+		</style>
 
 </head>
 
-<body class="stretched side-push-panel" data-loader-html="<div><img src='demos/car/images/page-loader.gif' alt='Loader'></div>">
-
-	<!-- Side Panel Overlay -->
-	<div class="body-overlay"></div>
-
-	<!-- Side Panel -->
-	<div id="side-panel">
-
-		<div id="side-panel-trigger-close" class="side-panel-trigger"><a href="#"><i class="bi-x-lg"></i></a></div>
-
-		<div class="side-panel-wrap">
-
-			<div class="widget">
-
-				<a href="index.html"><img src="demos/car/images/logo@2x.png" alt="Canvas Logo" height="50"></a>
-
-				<p>It has always been, and will always be, about quality. We're passionate about ethically sourcing the finest coffee beans, roasting them with great care. We'd like to hear your message!</p>
-
-				<div class="widget quick-contact-widget form-widget border-0 pt-0">
-
-					<h4>Quick Contact</h4>
-					<div class="form-result"></div>
-					<form id="quick-contact-form" name="quick-contact-form" action="include/form.php" method="post" class="quick-contact-form mb-0">
-						<div class="form-process">
-							<div class="css3-spinner">
-								<div class="css3-spinner-scaler"></div>
-							</div>
-						</div>
-						<input type="text" class="required form-control mb-2" id="quick-contact-form-name" name="quick-contact-form-name" value="" placeholder="Full Name">
-						<input type="text" class="required form-control email mb-2" id="quick-contact-form-email" name="quick-contact-form-email" value="" placeholder="Email Address">
-						<textarea class="required form-control mb-2 short-textarea" id="quick-contact-form-message" name="quick-contact-form-message" rows="4" cols="30" placeholder="Message"></textarea>
-						<input type="text" class="d-none" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" value="">
-						<input type="hidden" name="prefix" value="quick-contact-form-">
-						<button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="button button-small button-3d m-0" value="submit">Send Email</button>
-					</form>
-
-				</div>
-
-
-			</div>
-
-		</div>
-
-	</div>
+<body class="stretched" data-loader-html="<div><img src='demos/car/images/page-loader.gif' alt='Loader'></div>">
 
 	<!-- Document Wrapper
 	============================================= -->
 	<div id="wrapper">
 
-		<!-- Header
-		============================================= -->
-		<header id="header" class="full-header header-size-custom" data-sticky-shrink="false">
-			<div id="header-wrap">
-				<div class="container-fluid">
-					<div class="header-row flex-lg-row-reverse">
+	<!-- Header
+	============================================= -->
+	<header id="header" class="full-header header-size-custom" data-sticky-shrink="false">
+		<div id="header-wrap">
+			<div class="container-fluid">
+				<div class="header-row flex-lg-row-reverse">
 
-						<!-- Logo
-						============================================= -->
-						<div id="logo" class="me-lg-0 ms-lg-auto">
-							<a href="demo-car.html">
-								<img class="logo-default" srcset="demos/car/images/logo.png, demos/car/images/logo@2x.png 2x" src="demos/car/images/logo@2x.png" alt="Canvas Logo">
-							</a>
-						</div><!-- #logo end -->
+					<!-- Logo
+					============================================= -->
+					<div id="logo" class="me-lg-0 ms-lg-auto">
+						<a href="demo-car.html">
+							<h2 class="mb-0 text-white fw-bold">ALL EASY MKT SA DE CV</h2>
+						</a>
+					</div><!-- #logo end -->
 
-						<div class="primary-menu-trigger">
-							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
-								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
-							</button>
-						</div>
-
-						<!-- Primary Navigation
-						============================================= -->
-						<nav class="primary-menu with-arrows">
-							<ul class="menu-container">
-								<li class="menu-item current"><a class="menu-link" href="demo-car.html"><div>Home</div></a></li>
-								<!-- Mega Menu -->
-								<li class="menu-item mega-menu"><a class="menu-link" href="demo-car-single.html"><div>Models</div></a>
-									<div class="mega-menu-content mega-menu-style-2">
-										<div class="container">
-											<div class="row">
-												<ul class="sub-menu-container mega-menu-column col-12">
-													<li class="menu-item">
-														<div class="widget text-center">
-
-															<h3 class="mb-0">Featured Models</h3>
-															<a href="#" class="button button-small button-rounded button-border button-dark button-black font-primary" style="margin: 10px 0 40px">Show all Cars</a>
-
-															<!-- Mega Menu Cars Carousel -->
-															<div class="owl-carousel image-carousel carousel-widget text-center" data-margin="20" data-nav="false" data-pagi="true" data-items-xs="1" data-items-sm="2" data-items-md="4" data-items-lg="6" data-items-xl="6">
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/1.png" alt="Car">BMW 1 Series ActiveE</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/4.png" alt="Car">Mercedes-Benz S-Class</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/5.png" alt="Car">Gran Turismo</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/6.png" alt="Car">Mclaren 675LT SPIDER</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/7.png" alt="Car">Honda City</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/8.png" alt="Car">Toyota Qualis</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/9.png" alt="Car">Honda WR-V</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/10.png" alt="Car">Suzuki Breeza</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/2.png" alt="Car">Chevrolet Spark</a></div>
-																<div class="oc-item"><a href="demo-car-single.html"><img src="demos/car/images/mega-menu/3.png" alt="Car">Honda JaZZ</a></div>
-
-															</div>
-														</div>
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="menu-item"><a class="menu-link" href="demo-car-listing.html"><div>Car Listing</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-car-dealers.html"><div>Dealers</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-car-accessories.html"><div>Accessories</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-car-interiors.html"><div>Interiors</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-car-faqs.html"><div>FAQs</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-car-blog.html"><div>Blog</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="demo-car-contact.html"><div>Contacts</div></a></li>
-							</ul>
-						</nav><!-- #primary-menu end -->
-
+					<div class="primary-menu-trigger">
+						<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+							<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+						</button>
 					</div>
-				</div>
-			</div>
-			<div class="header-wrap-clone"></div>
-		</header><!-- #header end -->
 
-		<!-- Page Title
+				<!-- Primary Navigation
+				============================================= -->
+				<nav class="primary-menu with-arrows">
+					<ul class="menu-container">
+						<li class="menu-item"><a class="menu-link" href="demo-car.html"><div>Inicio</div></a></li>
+						<li class="menu-item"><a class="menu-link" href="#" data-lightbox="inline" data-lightbox-url="#financiamiento-form"><div>Financiamiento</div></a></li>
+						<li class="menu-item current"><a class="menu-link" href="demo-car-contact.html"><div>Contacto</div></a></li>
+					</ul>
+				</nav><!-- #primary-menu end -->				</div>
+			</div>
+		</div>
+		<div class="header-wrap-clone"></div>
+	</header><!-- #header end -->		<!-- Page Title
 		============================================= -->
 		<section class="page-title dark" style="padding: 160px 0;">
 			<div class="container z-3">
 				<div class="page-title-row">
 
-					<div class="page-title-content">
-						<h1>Get in Touch</h1>
-					</div>
-
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="#">Home</a></li>
-							<li class="breadcrumb-item"><a href="#">Cars</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Contact</li>
-						</ol>
-					</nav>
-
+				<div class="page-title-content text-center">
+					<h1>Contacto</h1>
+					<p class="lead mb-0">¿Necesitas financiamiento para tu vehículo? Contáctanos</p>
 				</div>
+
 			</div>
-
-			<section class="gmap w-100 h-100 position-absolute top-0 start-0 z-1" data-address="Melbourne, Australia" data-markers='[{address: "Melbourne, Australia", html: "<div class=\"p-2\" style=\"width: 300px;\"><h4 class=\"mb-2\">Hi! We are Envato!</h4><p class=\"mb-0\" style=\"font-size:1rem;\">Our mission is to help people to <strong>earn</strong> and to <strong>learn</strong> online. We operate <strong>marketplaces</strong> where hundreds of thousands of people buy and sell digital goods every day.</p></div>", icon:{ image: "images/icons/map-icon-red.png", iconsize: [32, 39], iconanchor: [32,39] } }]'></section>
-
-			<div class="video-wrap h-100 position-absolute top-0 start-0 z-2">
-				<div class="video-overlay" style="background-color: rgba(0,0,0,0.6);"></div>
-			</div>
-		</section><!-- .page-title end -->
-
-
-		<!-- Content
-		============================================= -->
-		<section id="content">
-			<div class="content-wrap">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="heading-block">
-								<h2>contact Us</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum tempore autem distinctio qui iure aspernatur doloribus porro blanditiis perspiciatis alias.</p>
-							</div>
-
-							<div class="form-widget">
+		</div>
+	</section><!-- .page-title end -->
+	<!-- Content
+	============================================= -->
+	<section id="content">
+		<div class="content-wrap" style="padding: 80px 0;">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-8">
+						<div class="heading-block text-center border-bottom-0">
+							<h2 class="fw-bold">Formulario de Contacto</h2>
+							<span>Completa el formulario y nos pondremos en contacto contigo lo antes posible</span>
+						</div>							<div class="form-widget">
 
 								<div class="form-result"></div>
 
-								<form class="row mb-0" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
+								<form class="row mb-0" id="template-contactform" name="template-contactform" action="https://formspree.io/f/xjknqbvj" method="post">
 
 									<div class="form-process">
 										<div class="css3-spinner">
@@ -222,77 +130,60 @@
 									</div>
 
 									<div class="col-md-4 form-group">
-										<label for="template-contactform-name">Name <small>*</small></label>
-										<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="form-control border-form-control required">
+										<label for="template-contactform-name">Nombre <small>*</small></label>
+										<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="form-control border-form-control required" placeholder="Nombre(s)">
 									</div>
 
 									<div class="col-md-4 form-group">
-										<label for="template-contactform-email">Email <small>*</small></label>
-										<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email form-control border-form-control">
+										<label for="template-contactform-lastname">Apellidos <small>*</small></label>
+										<input type="text" id="template-contactform-lastname" name="template-contactform-lastname" value="" class="form-control border-form-control required" placeholder="Apellidos">
 									</div>
 
 									<div class="col-md-4 form-group">
-										<label for="template-contactform-phone">Phone</label>
-										<input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="form-control border-form-control">
+										<label for="template-contactform-email">Correo electrónico <small>*</small></label>
+										<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email form-control border-form-control" placeholder="correo@ejemplo.com">
 									</div>
 
 									<div class="w-100"></div>
 
 									<div class="col-md-8 form-group">
-										<label for="template-contactform-subject">Subject <small>*</small></label>
-										<input type="text" id="template-contactform-subject" name="subject" value="" class="required form-control border-form-control">
+										<label for="template-contactform-phone">Teléfono</label>
+										<input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="form-control border-form-control" placeholder="10 dígitos">
 									</div>
 
 									<div class="col-md-4 form-group">
-										<label for="template-contactform-service">Services</label>
-										<select id="template-contactform-service" name="template-contactform-service" class="form-select border-form-control">
-											<option value="">-- Select One --</option>
-											<option value="Wordpress">Wordpress</option>
-											<option value="PHP / MySQL">PHP / MySQL</option>
-											<option value="HTML5 / CSS3">HTML5 / CSS3</option>
-											<option value="Graphic Design">Graphic Design</option>
-										</select>
+										<label for="template-contactform-service">Tipo de vehículo</label>
+										<input type="text" id="template-contactform-service" name="template-contactform-service" class="form-control border-form-control" placeholder="Ej. Sedan, SUV, Pickup">
 									</div>
 
 									<div class="w-100"></div>
 
+									<div class="col-md-6 form-group">
+										<label for="template-contactform-budget">Presupuesto estimado</label>
+										<input type="text" id="template-contactform-budget" name="template-contactform-budget" class="form-control border-form-control" placeholder="$ MXN">
+									</div>
+
 									<div class="col-12 form-group">
-										<label for="template-contactform-message">Message <small>*</small></label>
-										<textarea class="required form-control border-form-control" id="template-contactform-message" name="template-contactform-message" rows="5" cols="30"></textarea>
+										<label for="template-contactform-message">Comentarios</label>
+										<textarea class="required form-control border-form-control" id="template-contactform-message" name="template-contactform-message" rows="5" cols="30" placeholder="Cuéntanos qué unidad necesitas y para qué plataforma trabajas"></textarea>
 									</div>
 
 									<div class="col-12 form-group d-none">
 										<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="form-control border-form-control">
 									</div>
 
-									<div class="col-12 form-group">
-
-										<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-										<div class="g-recaptcha" data-sitekey="6LfijgUTAAAAACPt-XfRbQszAKAJY0yZDjjhMUQT"></div>
-
-									</div>
-
-									<div class="col-12 form-group">
-										<button class="button button-3d m-0" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Send Message</button>
-									</div>
-
-									<input type="hidden" name="prefix" value="template-contactform-">
+								<div class="col-12 form-group">
+									<button class="button button-3d button-rounded m-0" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Enviar Mensaje</button>
+							</div>
+							
+							<input type="hidden" name="prefix" value="template-contactform-">
+							<input type="hidden" name="_subject" value="Nuevo contacto desde demo-car-contact">
 
 								</form>
 
 							</div>
 						</div>
 
-						<div class="col-md-4">
-							<div class="card mt-4">
-								<img class="card-img-top" src="demos/car/images/call.jpg" alt="Card image cap">
-								<div class="card-body">
-									<h4 class="mb-1 color">Call Toll Free:</h4>
-									<h2 class="card-title mb-2"><i class="bi-telephone position-relative me-1 color" style="top: 4px;"></i> 1800(2345)(6789)</h2>
-									<p class="card-text">We are 24/7 available. Our expert staff is standing by to answer your questions. You can also contact by email: <a class="btn-link" href="mailto:noreply@canvas.com">noreply@canvas.com</a></p>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -310,44 +201,32 @@
 						<div class="col-lg-7">
 
 							<div class="row col-mb-30">
-								<div class="col-6 col-lg-3">
+								<div class="col-6 col-lg-4">
 									<div class="widget widget_links widget-li-noicon">
-										<h4>Hire</h4>
+										<h4>INICIO</h4>
 										<ul>
-											<li><a href="#">Documentation</a></li>
-											<li><a href="#">Feedback</a></li>
-											<li><a href="#">Plugins</a></li>
+											<li><a href="demo-car.html">Inicio</a></li>
+											<li><a href="#" data-lightbox="inline" data-lightbox-url="#financiamiento-form">Financiamiento</a></li>
+											<li><a href="demo-car-contact.html">Contacto</a></li>
 										</ul>
 									</div>
 								</div>
-								<div class="col-6 col-lg-3">
+								<div class="col-6 col-lg-4">
 									<div class="widget widget_links widget-li-noicon">
-										<h4>Community</h4>
+										<h4>Ayuda</h4>
 										<ul>
-											<li><a href="#">Documentation</a></li>
-											<li><a href="#">Feedback</a></li>
-											<li><a href="#">Plugins</a></li>
-											<li><a href="#">Support Forums</a></li>
+											<li><a href="#">Asistencia Cliente</a></li>
+										<li><a href="/aviso-privacidad.html" target="_blank">Aviso de Privacidad</a></li>
+											<li><a href="#">Condiciones Generales</a></li>
 										</ul>
 									</div>
 								</div>
-								<div class="col-6 col-lg-3">
+								<div class="col-6 col-lg-4">
 									<div class="widget widget_links widget-li-noicon">
-										<h4>Learn</h4>
+										<h4>Socios</h4>
 										<ul>
-											<li><a href="#">Documentation</a></li>
-											<li><a href="#">Feedback</a></li>
-											<li><a href="#">Plugins</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="col-6 col-lg-3">
-									<div class="widget widget_links widget-li-noicon">
-										<h4>About</h4>
-										<ul>
-											<li><a href="#">Documentation</a></li>
-											<li><a href="#">Feedback</a></li>
-											<li><a href="#">Plugins</a></li>
+										<li><a href="https://grupopicacho.com.mx/" target="_blank" rel="noopener noreferrer">Grupo Picacho</a></li>
+											<li><a href="#">Motornation</a></li>
 										</ul>
 									</div>
 								</div>
@@ -356,12 +235,11 @@
 						</div>
 
 						<div class="col-lg-5 text-center text-lg-end">
-							<img src="demos/car/images/logo-footer.png" alt="Image" height="50">
-							<br>
-							<div style="color: #444">
-								<span>&copy; Canvas Automotive. All Rights Reserved.</span>
+							<div class="fw-bold text-white" style="font-size: 22px;">ALL EASY MKT SA DE CV</div>
+							<div class="mt-2" style="color: #fff;">
+								<span>&copy; ALL EASY MKT SA DE CV</span>
 								<div class="clear"></div>
-								<p style="margin-top: 10px;">Objectively restore standards compliant opportunities whereas one-to-one collaboration and idea-sharing.</p>
+								<p class="mb-1" style="margin-top: 10px;">Con el Respaldo de GRUPO PICACHO y MOTORNATION</p>
 							</div>
 						</div>
 					</div>
@@ -376,14 +254,51 @@
 	============================================= -->
 	<div id="gotoTop" class="uil uil-angle-up"></div>
 
-	<!-- Contact Button
-	============================================= -->
-	<div id="contact-me" class="bi-envelope side-panel-trigger bg-color"></div>
-
 	<!-- JavaScripts
 	============================================= -->
 	<script src="js/plugins.min.js"></script>
 	<script src="js/functions.bundle.js"></script>
+	<script>
+		// Envoi du formulaire principal vers Formspree avec feedback en page
+		(function() {
+			const form = document.getElementById('template-contactform');
+			if (!form) return;
+
+			const formResult = form.closest('.form-widget')?.querySelector('.form-result');
+			const loader = form.querySelector('.form-process');
+			const endpoint = form.getAttribute('action') || 'https://formspree.io/f/xjknqbvj';
+
+			function showMessage(html) {
+				if (!formResult) return;
+				formResult.innerHTML = html;
+			}
+
+			form.addEventListener('submit', function(e) {
+				e.preventDefault();
+				if (loader) loader.style.display = 'block';
+				showMessage('');
+
+				const data = new FormData(form);
+				data.append('_subject', 'Nuevo contacto desde demo-car-contact');
+
+				fetch(endpoint, {
+					method: 'POST',
+					body: data,
+					headers: { 'Accept': 'application/json' }
+				}).then(function(resp) {
+					if (!resp.ok) throw new Error('Network response was not ok');
+					return resp.json().catch(() => ({}));
+				}).then(function() {
+					showMessage('<div class="alert alert-success m-0 mt-3">¡Gracias! Hemos recibido tu mensaje.</div>');
+					form.reset();
+				}).catch(function() {
+					showMessage('<div class="alert alert-danger m-0 mt-3">No se pudo enviar. Inténtalo de nuevo en unos minutos.</div>');
+				}).finally(function() {
+					if (loader) loader.style.display = 'none';
+				});
+			});
+		})();
+	</script>
 
 </body>
 </html>
